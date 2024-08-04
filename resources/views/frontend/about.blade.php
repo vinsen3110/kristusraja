@@ -60,7 +60,7 @@
 <div class="container-fluid guide py-3">
     <div class="container py-3">
         <div class="mx-auto text-center mb-5" style="max-width: 900px;">
-            <h5 class="section-title px-3">Dewan Perwakilan Stasi</h5>
+            <h5 class="section-title px-3">Dewan Pengurus Paroki</h5>
             <h1 class="mb-0">Kepengurusan</h1>
         </div>
         <div class="row g-4">
