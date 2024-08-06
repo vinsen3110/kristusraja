@@ -38,7 +38,7 @@
                     </div>
                     <div class="row bg-primary rounded-bottom mx-0">
                         <div class="col-6 text-start px-0">
-                            <a href="#" class="btn-hover btn text-white py-2 px-4">Read More</a>
+                            <a href="{{ route('selengkapnya')}}" class="btn-hover btn text-white py-2 px-4">Read More</a>
                         </div>
                     </div>
                 </div>
@@ -58,7 +58,7 @@
                     </div>
                     <div class="row bg-primary rounded-bottom mx-0">
                         <div class="col-6 text-start px-0">
-                            <a href="#" class="btn-hover btn text-white py-2 px-4">Read More</a>
+                            <a href="{{ route('selengkapnya')}}" class="btn-hover btn text-white py-2 px-4">Read More</a>
                         </div>
                     </div>
                 </div>
@@ -78,7 +78,7 @@
                     </div>
                     <div class="row bg-primary rounded-bottom mx-0">
                         <div class="col-6 text-start px-0">
-                            <a href="#" class="btn-hover btn text-white py-2 px-4">Read More</a>
+                            <a href="{{ route('selengkapnya')}}" class="btn-hover btn text-white py-2 px-4">Read More</a>
                         </div>
                     </div>
                 </div>
@@ -98,7 +98,7 @@
                     </div>
                     <div class="row bg-primary rounded-bottom mx-0">
                         <div class="col-6 text-start px-0">
-                            <a href="#" class="btn-hover btn text-white py-2 px-4">Read More</a>
+                            <a href="{{ route('selengkapnya')}}" class="btn-hover btn text-white py-2 px-4">Read More</a>
                         </div>
                     </div>
                 </div>
@@ -125,7 +125,7 @@
             </div>
             <div class="row bg-primary rounded-bottom mx-0">
                 <div class="col-6 text-start px-0">
-                    <a href="#" class="btn-hover btn text-white py-2 px-4">Read More</a>
+                    <a href="{{ route('selengkapnya')}}" class="btn-hover btn text-white py-2 px-4">Read More</a>
                 </div>
             </div>
         </div>
@@ -145,7 +145,7 @@
             </div>
             <div class="row bg-primary rounded-bottom mx-0">
                 <div class="col-6 text-start px-0">
-                    <a href="#" class="btn-hover btn text-white py-2 px-4">Read More</a>
+                    <a href="{{ route('selengkapnya')}}" class="btn-hover btn text-white py-2 px-4">Read More</a>
                 </div>
             </div>
         </div>
@@ -165,7 +165,7 @@
             </div>
             <div class="row bg-primary rounded-bottom mx-0">
                 <div class="col-6 text-start px-0">
-                    <a href="#" class="btn-hover btn text-white py-2 px-4">Read More</a>
+                    <a href="{{ route('selengkapnya')}}" class="btn-hover btn text-white py-2 px-4">Read More</a>
                 </div>
             </div>
         </div>
@@ -185,7 +185,7 @@
             </div>
             <div class="row bg-primary rounded-bottom mx-0">
                 <div class="col-6 text-start px-0">
-                    <a href="#" class="btn-hover btn text-white py-2 px-4">Read More</a>
+                    <a href="{{ route('selengkapnya')}}" class="btn-hover btn text-white py-2 px-4">Read More</a>
                 </div>
             </div>
         </div>
