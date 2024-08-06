@@ -20,7 +20,7 @@
     <div class="container py-5">
         <div class="mx-auto text-center mb-5" style="max-width: 900px;">
             <h5 class="section-title px-3" style="margin-top: 10%">Berita</h5>
-            <h1 class="mb-0">Berita Bulanan</h1>
+            <h1 class="mb-0" style="color: white">Berita Bulan Agustus</h1>
         </div>
         <div class="packages-carousel owl-carousel">
             <div class="packages-item">
@@ -109,6 +109,9 @@
   {{-- kolom 2 --}}
   <div class="container-fluid packages py-3">
     <div class="container py-3">
+        <div class="mx-auto text-center mb-5" style="max-width: 900px;">
+            <h1 class="mb-0" style="color: white">Berita Bulan September</h1>
+        </div>
   <div class="packages-carousel owl-carousel">
     <div class="packages-item">
         <div class="packages-img">
