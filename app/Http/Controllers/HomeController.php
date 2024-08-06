@@ -37,6 +37,9 @@ class HomeController extends Controller
     public function berita(){
         return view('frontend.berita');
     }
+    public function contact(){
+        return view('frontend.contact');
+    }
     public function selengkapnya(){
         return view('frontend.selengkapnya');
     }

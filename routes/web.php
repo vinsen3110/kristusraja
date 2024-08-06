@@ -12,6 +12,7 @@ Route::get('bir', [\App\Http\Controllers\HomeController::class, 'bir'])->name('b
 Route::get('bia', [\App\Http\Controllers\HomeController::class, 'bia'])->name('bia');
 Route::get('lingkungan', [\App\Http\Controllers\HomeController::class, 'lingkungan'])->name('lingkungan');
 Route::get('berita', [\App\Http\Controllers\HomeController::class, 'berita'])->name('berita');
+Route::get('contact', [\App\Http\Controllers\HomeController::class, 'contact'])->name('contact');
 Route::get('selengkapnya', [\App\Http\Controllers\HomeController::class, 'selengkapnya'])->name('selengkapnya');
 
 Route::get('admin/dashboard', [\App\Http\Controllers\Admin\DashboardController::class, 'index'])->name('admin.dashboard.index');
