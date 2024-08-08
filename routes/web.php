@@ -15,5 +15,10 @@ Route::get('berita', [\App\Http\Controllers\HomeController::class, 'berita'])->n
 Route::get('contact', [\App\Http\Controllers\HomeController::class, 'contact'])->name('contact');
 Route::get('selengkapnya', [\App\Http\Controllers\HomeController::class, 'selengkapnya'])->name('selengkapnya');
 
-Route::get('admin/dashboard', [\App\Http\Controllers\Admin\DashboardController::class, 'index'])->name('admin.dashboard.index');
-Route::get('/dashboard', [\App\Http\Controllers\Admin\DashboardController::class, 'dashboard'])->name('dashboard');
+
+Route::get('/login', [\App\Http\Controllers\Admin\AuthController::class, 'login'])->name('login');
+Route::post('/login', [\App\Http\Controllers\Admin\AuthController::class, 'authenticating']);
+
+Route::middleware('auth')->group(function() {
+    Route::get('admin/dashboard', [\App\Http\Controllers\Admin\DashboardController::class, 'index'])->name('admin.dashboard.index');
+});
