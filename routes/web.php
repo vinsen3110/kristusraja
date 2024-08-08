@@ -22,5 +22,6 @@ Route::post('/login', [\App\Http\Controllers\Admin\AuthController::class, 'authe
 Route::middleware('auth')->group(function() {
     Route::get('/logout', [\App\Http\Controllers\Admin\AuthController::class, 'logout'])->name('logout');
 
-    Route::get('admin/dashboard', [\App\Http\Controllers\Admin\DashboardController::class, 'index'])->name('admin.dashboard.index');
+    Route::get('admin/dashboard', [\App\Http\Controllers\Admin\DashboardController::class, 'index'])->name('dashboard');
+    Route::get('admin/kepengurusan', [\App\Http\Controllers\Admin\KepengurusanController::class, 'show'])->name('kepengurusan');
 });
