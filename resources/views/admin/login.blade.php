@@ -47,7 +47,7 @@
                   <h4 class="font-weight-bolder">Sign In</h4>
                   <p class="mb-0">Enter your email and password to sign in</p>
                   @if (session('status'))
-                            <div class="alert alert-danger">
+                            <div class="alert alert-danger text-white">
                                 {{ session('message')}}
                             </div>
                   @endif

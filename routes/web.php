@@ -20,5 +20,7 @@ Route::get('/login', [\App\Http\Controllers\Admin\AuthController::class, 'login'
 Route::post('/login', [\App\Http\Controllers\Admin\AuthController::class, 'authenticating']);
 
 Route::middleware('auth')->group(function() {
+    Route::get('/logout', [\App\Http\Controllers\Admin\AuthController::class, 'logout'])->name('logout');
+
     Route::get('admin/dashboard', [\App\Http\Controllers\Admin\DashboardController::class, 'index'])->name('admin.dashboard.index');
 });

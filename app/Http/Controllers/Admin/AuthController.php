@@ -24,11 +24,19 @@ class AuthController extends Controller
         $credentials = $request->only('username', 'password');
         
         if (Auth::attempt($credentials)) {
-            return redirect()->intended('admin.dashboard');
+            return redirect()->intended('admin/dashboard');
         }
 
         Session::flash('status', 'Username atau Password Salah');
         Session::flash('message', 'Username atau Password Salah');
         return redirect('/login');
+    }
+
+    public function logout(Request $request)
+    {
+        Auth::logout();
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
+        return redirect('/');
     }
 }
