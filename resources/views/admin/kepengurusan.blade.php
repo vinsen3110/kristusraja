@@ -5,14 +5,20 @@
         <div class="col-12">
             <div class="card mb-4">
                 <div class="card-header pb-0">
-                    <a href="" class="btn btn-primary btn-sm ms-auto">Tambah Kepengurusan</a>
+                    <a href="{{ route('kepengurusanadd') }}" class="btn btn-primary btn-sm ms-auto">Tambah Kepengurusan</a>
                 </div>
                 <div class="card-body px-0 pt-0 pb-2">
                     <div class="table-responsive p-0">
+                        @if (session('status'))
+                            <div class="alert alert-success alert-dismissible mt-4">
+                                {{ session('status') }}
+                            </div>
+                        @endif
                         <table class="table align-items-center mb-0">
                             <thead>
                                 <tr>
-                                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">List Kepengurusan
+                                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">List
+                                        Kepengurusan
                                     </th>
                                     <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">
                                         Jabatan</th>
@@ -44,9 +50,13 @@
                                         <span class="badge badge-sm bg-gradient-secondary">Offline</span>
                                     </td>
                                     <td class="align-middle">
-                                        <a href="javascript:;" class="text-secondary font-weight-bold text-xs"
+                                        <a href="javascript:;" class="text-info font-weight-bold text-xs m-2"
                                             data-toggle="tooltip" data-original-title="Edit user">
                                             Edit
+                                        </a> |
+                                        <a href="javascript:;" class="text-danger font-weight-bold text-xs m-2"
+                                            data-toggle="tooltip" data-original-title="Edit user">
+                                            Hapus
                                         </a>
                                     </td>
                                 </tr>

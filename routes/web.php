@@ -24,4 +24,6 @@ Route::middleware('auth')->group(function() {
 
     Route::get('admin/dashboard', [\App\Http\Controllers\Admin\DashboardController::class, 'index'])->name('dashboard');
     Route::get('admin/kepengurusan', [\App\Http\Controllers\Admin\KepengurusanController::class, 'show'])->name('kepengurusan');
+    Route::get('admin/kepengurusanadd', [\App\Http\Controllers\Admin\KepengurusanController::class, 'add'])->name('kepengurusanadd');
+    Route::post('admin/kepengurusanstore', [\App\Http\Controllers\Admin\KepengurusanController::class, 'store'])->name('kepengurusanstore');
 });
