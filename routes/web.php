@@ -26,4 +26,7 @@ Route::middleware('auth')->group(function() {
     Route::get('admin/kepengurusan', [\App\Http\Controllers\Admin\KepengurusanController::class, 'show'])->name('kepengurusan');
     Route::get('admin/kepengurusanadd', [\App\Http\Controllers\Admin\KepengurusanController::class, 'add'])->name('kepengurusanadd');
     Route::post('admin/kepengurusanstore', [\App\Http\Controllers\Admin\KepengurusanController::class, 'store'])->name('kepengurusanstore');
+    Route::get('admin/kepengurusanedit/{slug}', [\App\Http\Controllers\Admin\KepengurusanController::class, 'edit'])->name('kepengurusanedit');
+    Route::put('admin/kepengurusanupdate/{slug}', [\App\Http\Controllers\Admin\KepengurusanController::class, 'update'])->name('kepengurusanupdate');
+    Route::get('admin/kepengurusanhapus/{slug}', [\App\Http\Controllers\Admin\KepengurusanController::class, 'delete'])->name('kepengurusanhapus');
 });

@@ -1,13 +1,14 @@
 @extends('layouts.admin')
 
-@section('title', 'Tambah Kepengurusan')
+@section('title', 'Edit Kepengurusan')
 
 @section('content')
     <div class="row">
         <div class="col-md-12">
 
-            <form action="{{ route('kepengurusanstore') }}" method="POST" enctype="multipart/form-data">
+            <form action="{{ route('kepengurusanupdate',$kepengurusan->slug) }}" method="POST" enctype="multipart/form-data">
                 @csrf
+                @method('put')
                 <div class="card">
                     <div class="card-header pb-0">
                         <div class="d-flex align-items-center">
@@ -29,20 +30,34 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label for="example-text-input" class="form-control-label">Nama Lengkap</label>
-                                    <input class="form-control" type="text" name="nama" placeholder="Yanto Saputra">
+                                    <label class="form-control-label">Nama Lengkap</label>
+                                    <input class="form-control" type="text" name="nama" id="nama"
+                                        value="{{ $kepengurusan->nama }}">
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label for="example-text-input" class="form-control-label">Jabatan</label>
-                                    <input class="form-control" type="text" name="jabatan" placeholder="CEO PT.Berkah">
+                                    <label class="form-control-label">Jabatan</label>
+                                    <input class="form-control" type="text" name="jabatan" id="nama"
+                                        value="{{ $kepengurusan->jabatan }}">
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label for="example-text-input" class="form-control-label">Foto</label>
+                                    <label class="form-control-label">Foto</label>
                                     <input class="form-control" type="file" name="image">
+
+                                </div>
+                                <div class=" mt-5">
+                                    <div class="avatar avatar-xl position-relative">
+                                        @if ($kepengurusan->cover != '')
+                                            <img src="{{ asset('storage/cover/' . $kepengurusan->cover) }}" alt=""
+                                                >
+                                        @else
+                                            <img src="{{ asset('img/foto-not-font.jpeg') }}" alt=""
+                                                >
+                                        @endif
+                                    </div>
                                 </div>
                             </div>
                         </div>

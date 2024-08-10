@@ -1,19 +1,25 @@
 @extends('layouts.admin')
 
+@section('title', 'Kepengurusan')
+
 @section('content')
     <div class="row">
         <div class="col-12">
             <div class="card mb-4">
+                @if (session('status'))
+                    <div class="alert alert-success alert-dismissible text-white" role="alert">
+                        {{ session('status') }}
+                        <button type="button" class="btn-close text-lg py-3 opacity-10" data-bs-dismiss="alert"
+                            aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                @endif
                 <div class="card-header pb-0">
                     <a href="{{ route('kepengurusanadd') }}" class="btn btn-primary btn-sm ms-auto">Tambah Kepengurusan</a>
                 </div>
                 <div class="card-body px-0 pt-0 pb-2">
                     <div class="table-responsive p-0">
-                        @if (session('status'))
-                            <div class="alert alert-success alert-dismissible mt-4">
-                                {{ session('status') }}
-                            </div>
-                        @endif
                         <table class="table align-items-center mb-0">
                             <thead>
                                 <tr>
@@ -22,46 +28,63 @@
                                     </th>
                                     <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">
                                         Jabatan</th>
-                                    <th
-                                        class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
-                                        Status</th>
                                     <th class="text-secondary opacity-7"></th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td>
-                                        <div class="d-flex px-2 py-1">
-                                            <div>
-                                                <img src="../assets/img/team-4.jpg" class="avatar avatar-sm me-3"
-                                                    alt="user6">
+                                @foreach ($kepengurusan as $item)
+                                    <tr>
+                                        <td>
+                                            <div class="d-flex px-2 py-1">
+                                                <div>
+                                                    @if ($item->cover != '')
+                                                        <img src="{{ asset('storage/cover/' . $item->cover) }}"
+                                                            alt="" class="avatar avatar-sm me-3">
+                                                    @else
+                                                        <img src="{{ asset('img/foto-not-font.jpeg') }}" alt=""
+                                                            class="avatar avatar-sm me-3">
+                                                    @endif
+                                                </div>
+                                                <div class="d-flex flex-column justify-content-center">
+                                                    <h6 class="mb-0 text-sm">{{ $item->nama }}</h6>
+                                                </div>
                                             </div>
-                                            <div class="d-flex flex-column justify-content-center">
-                                                <h6 class="mb-0 text-sm">Miriam Eric</h6>
-                                                <p class="text-xs text-secondary mb-0">miriam@creative-tim.com</p>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <p class="text-xs font-weight-bold mb-0">Programtor</p>
-                                        <p class="text-xs text-secondary mb-0">Developer</p>
-                                    </td>
-                                    <td class="align-middle text-center text-sm">
-                                        <span class="badge badge-sm bg-gradient-secondary">Offline</span>
-                                    </td>
-                                    <td class="align-middle">
-                                        <a href="javascript:;" class="text-info font-weight-bold text-xs m-2"
-                                            data-toggle="tooltip" data-original-title="Edit user">
-                                            Edit
-                                        </a> |
-                                        <a href="javascript:;" class="text-danger font-weight-bold text-xs m-2"
-                                            data-toggle="tooltip" data-original-title="Edit user">
-                                            Hapus
-                                        </a>
-                                    </td>
-                                </tr>
+                                        </td>
+                                        <td>
+                                            <p class="text-xs font-weight-bold mb-0">{{ $item->jabatan }}</p>
+                                        </td>
+                                        <td class="align-middle">
+                                            <a href="kepengurusanedit/{{ $item->slug }}"
+                                                class=" btn btn-info font-weight-bold text-xs" data-toggle="tooltip"
+                                                data-original-title="Edit user">
+                                                Edit
+                                            </a>
+                                            <a href="kepengurusanhapus/{{ $item->slug }}" class="btn btn-danger font-weight-bold text-xs"
+                                            onclick="return confirm('Are you sure?')">Hapus</a>
+                                            
+                                        </td>
+                                    </tr>
+                                @endforeach
                             </tbody>
                         </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        Apakah Anda Yakin Ingin Menghapus Data
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <a href="kepengurusanhapus/{{ $item->slug }}" class="btn btn-danger">Hapus</a>
                     </div>
                 </div>
             </div>

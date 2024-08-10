@@ -12,7 +12,10 @@ class Kepengurusan extends Model
     use Sluggable;
 
     protected $fillable = [
-        'nama', 'slug', 'jabatan', 'cover'
+        'nama', 
+        'slug', 
+        'jabatan', 
+        'cover',
     ];
 
     public function sluggable(): array
