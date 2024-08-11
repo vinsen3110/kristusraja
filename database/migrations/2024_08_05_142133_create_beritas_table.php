@@ -14,16 +14,10 @@ return new class extends Migration
         Schema::create('beritas', function (Blueprint $table) {
             $table->id();
             $table->string('judul');
-            $table->dateTime('tanggal')->nullable();
+            $table->date('tanggal')->nullable();
             $table->string('subjudul');
             $table->string('foto_utama', 255)->nullable();
             $table->text('article');
-            $table->string('foto_1', 255)->nullable();
-            $table->string('foto_2', 255)->nullable();
-            $table->string('foto_3', 255)->nullable();
-            $table->string('foto_4', 255)->nullable();
-            $table->string('foto_5', 255)->nullable();
-            $table->string('foto_6', 255)->nullable();
             $table->timestamps();
         });
     }

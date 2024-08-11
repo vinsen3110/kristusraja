@@ -5,7 +5,6 @@
 @section('content')
     <div class="row">
         <div class="col-md-12">
-
             <form action="{{ route('kepengurusanstore') }}" method="POST" enctype="multipart/form-data">
                 @csrf
                 <div class="card">
@@ -48,7 +47,7 @@
                         </div>
                     </div>
 
-                    <div class="card-header pb-0">
+                    <div class="card m-2">
                         <div class="d-flex align-items-center">
                             <a href="{{ route('kepengurusan') }}" class="btn btn-danger btn-sm ms-auto m-2">Cancel</a>
                             <button type="submit" class="btn btn-primary btn-sm m-2">Save</button>

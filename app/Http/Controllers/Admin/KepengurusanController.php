@@ -15,8 +15,9 @@ class KepengurusanController extends Controller
         return view('admin.kepengurusan', ['kepengurusan' => $kepengurusan]);
     }
 
-    public function add()
+    public function tambah()
     {
+        
         return view('admin.kepengurusanAdd');
     }
 
@@ -43,7 +44,7 @@ class KepengurusanController extends Controller
     public function edit($slug)
     {
         $kepengurusan = Kepengurusan::where('slug', $slug)->first();
-        return view('admin.kepengurusanEdit', ['kepengurusan' => $kepengurusan]);
+        return view('admin.kepengurusanEdit ',  compact('slug'), ['kepengurusan' => $kepengurusan]);
     }
 
     public function update(Request $request, $slug)
@@ -60,7 +61,7 @@ class KepengurusanController extends Controller
             $request['cover'] = $newName;
         }
 
-        $kepengurusan = Kepengurusan::where('slug', $slug)->first();
+        $kepengurusan = Kepengurusan::where('slug', $slug)->firstOrFail();
 
         if ($request->nama !== $kepengurusan->nama) {
             $newSlug = Str::slug($request->nama);

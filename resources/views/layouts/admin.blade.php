@@ -33,6 +33,7 @@
   <link href="{{ asset('argon/assets/css/nucleo-svg.css')}}" rel="stylesheet" />
   <!-- CSS Files -->
   <link id="pagestyle" href="{{ asset('argon/assets/css/argon-dashboard.css?v=2.0.4')}}" rel="stylesheet" />
+  @yield('css')
 </head>
 
 <body class="g-sidenav-show   bg-gray-100">
@@ -49,7 +50,7 @@
     <div class="collapse navbar-collapse  w-auto " id="sidenav-collapse-main">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link {{ Request::is('admin/dashboard*') ? 'active' : '' }}" href="dashboard">
+          <a class="nav-link {{ Request::is('admin/dashboard*') ? 'active' : '' }}" href="{{ route('dashboard') }}">
             <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
               <i class="ni ni-tv-2 text-primary text-sm opacity-10"></i>
             </div>
@@ -57,7 +58,7 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link {{ Request::is('admin/kepengurusan*') ? 'active' : '' }}" href="kepengurusan">
+          <a class="nav-link {{ Request::is('admin/kepengurusan*') ? 'active' : '' }}" href="{{ route('kepengurusan') }}">
             <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
               <i class="ni ni-badge text-warning text-sm opacity-10"></i>
             </div>
@@ -65,7 +66,7 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link " href="./pages/billing.html">
+          <a class="nav-link {{ Request::is('admin/berita*') ? 'active' : '' }}" href="{{ route('berita') }}">
             <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
               <i class="ni ni-world-2 text-success text-sm opacity-10"></i>
             </div>
@@ -262,6 +263,7 @@
   <script src="{{ asset('argon/assets/js/plugins/perfect-scrollbar.min.js')}}"></script>
   <script src="{{ asset('argon/assets/js/plugins/smooth-scrollbar.min.js')}}"></script>
   <script src="{{ asset('argon/assets/js/plugins/chartjs.min.js')}}"></script>
+  @yield('scripts')
   <script>
     var ctx1 = document.getElementById("chart-line").getContext("2d");
 

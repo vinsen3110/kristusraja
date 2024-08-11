@@ -1,14 +1,12 @@
 @extends('layouts.admin')
 
-@section('title', 'Edit Kepengurusan')
+@section('title', 'Tambah Berita')
 
 @section('content')
     <div class="row">
         <div class="col-md-12">
-
-            <form action="{{ route('kepengurusanupdate', ['slug' => $kepengurusan->slug]) }}" method="POST" enctype="multipart/form-data">
+            <form action="{{ route('beritastore') }}" method="POST" enctype="multipart/form-data">
                 @csrf
-                @method('put')
                 <div class="card">
                     <div class="card-header pb-0">
                         <div class="d-flex align-items-center">
@@ -30,42 +28,40 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label class="form-control-label">Nama Lengkap</label>
-                                    <input class="form-control" type="text" name="nama" id="nama"
-                                        value="{{ $kepengurusan->nama }}">
+                                    <label for="example-text-input" class="form-control-label">Judul</label>
+                                    <input class="form-control" type="text" name="judul" placeholder="Yanto Saputra">
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label class="form-control-label">Jabatan</label>
-                                    <input class="form-control" type="text" name="jabatan" id="nama"
-                                        value="{{ $kepengurusan->jabatan }}">
+                                    <label for="example-text-input" class="form-control-label">Sub Judul</label>
+                                    <input class="form-control" type="text" name="subjudul" placeholder="Yanto Saputra">
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label class="form-control-label">Foto</label>
+                                    <label for="example-text-input" class="form-control-label">Foto Utama</label>
                                     <input class="form-control" type="file" name="image">
-
                                 </div>
-                                <div class="mt-4">
-                                    <div class="avatar avatar-xl mx-3">
-                                        @if ($kepengurusan->cover != '')
-                                            <img src="{{ asset('storage/cover/' . $kepengurusan->cover) }}" alt=""
-                                                style="width:100px; height:100px;"> 
-                                        @else
-                                            <img src="{{ asset('img/foto-not-font.jpeg') }}" alt=""
-                                                >
-                                        @endif
-                                    </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="example-text-input" class="form-control-label">Tanggal</label>
+                                    <input class="form-control" type="date" name="tanggal" placeholder="CEO PT.Berkah">
+                                </div>
+                            </div>
+                            <div class="col-md-13">
+                                <div class="form-group">
+                                    <label for="example-text-input" class="form-control-label">Deskripsi</label>
+                                    <input class="form-control" type="hidden" name="article" id="article">
+                                    <trix-editor input="article"></trix-editor>
                                 </div>
                             </div>
                         </div>
                     </div>
-
-                    <div class="card-header pb-0">
+                    <div class="card m-2">
                         <div class="d-flex align-items-center">
-                            <a href="{{ route('kepengurusan') }}" class="btn btn-danger btn-sm ms-auto m-2">Cancel</a>
+                            <a href="{{ route('berita') }}" class="btn btn-danger btn-sm ms-auto m-2">Cancel</a>
                             <button type="submit" class="btn btn-primary btn-sm m-2">Save</button>
                         </div>
                     </div>
@@ -73,4 +69,12 @@
             </form>
         </div>
     </div>
+@endsection
+
+@section('css')
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/trix@2.0.8/dist/trix.css">
+@endsection
+
+@section('scripts')
+    <script type="text/javascript" src="https://unpkg.com/trix@2.0.8/dist/trix.umd.min.js"></script>
 @endsection
