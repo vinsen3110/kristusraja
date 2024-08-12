@@ -100,26 +100,23 @@
                     <div class="packages-item">
                         <div class="packages-img">
                             @if ($item->foto_utama != '')
-                                                        <img src="{{ asset('storage/cover/' . $item->foto_utama) }}"
-                                                            alt="" class="img-fluid w-100 rounded-top">
-                                                    @else
-                                                        <img src="{{ asset('img/foto-not-font.jpeg') }}" alt=""
-                                                            class="img-fluid w-100 rounded-top">
-                                                    @endif
-                            <div class="packages-info d-flex border border-start-0 border-end-0 position-absolute" style="width: 100%; bottom: 0; left: 0; z-index: 5;">
-                                <small class="flex-fill text-center border-end-0 py-2"><i class="fa fa-calendar-alt text-primary me-2"></i>{{ $item ->tanggal}}</small>
+                                <img src="{{ asset('storage/cover/' . $item->foto_utama) }}" alt="" class="img-fluid w-100 rounded-top">
+                            @else
+                                <img src="{{ asset('img/foto-not-font.jpeg') }}" alt="" class="img-fluid w-100 rounded-top">
+                            @endif
+                            <div class="packages-info d-flex border border-start-0 border-end-0 position-absolute w-100" style="bottom: 0; left: 0; z-index: 5;">
+                                <small class="flex-fill text-center border-end-0 py-2"><i class="fa fa-calendar-alt text-primary me-2"></i>{{ $item->tanggal }}</small>
                             </div>
                         </div>
-                        <div class="packages-content bg-light" style="border-bottom-left-radius: 10px; border-bottom-right-radius: 10px;">
+                        <div class="packages-content bg-light rounded-bottom">
                             <div class="p-4 pb-0">
-                                <h5 class="mb-0">{{ $item->judul}}</h5>
-                                <small class="text-uppercase">{{ $item->subjudul}}</small>
-                                <p class="mb-4">{{ \App\Helpers\TextHelper::limitWords($item->article, 20) }}</p>
-                            </div>
+                                <h5 class="mb-0">{{ $item->judul }}</h5>
+                                <small class="text-uppercase">{{ $item->subjudul }}</small>
+                                <p class="mb-4">{{ Str::limit($item->article, 150) }}</p>
                             </div>
                             <div class="row bg-primary rounded-bottom mx-0">
                                 <div class="col-6 text-start px-0">
-                                    <a href="{{ route('selengkapnya')}}" class="btn-hover btn text-white py-2 px-4">Read More</a>
+                                    <a href="{{ route('selengkapnya') }}" class="btn-hover btn text-white py-2 px-4">Read More</a>
                                 </div>
                             </div>
                         </div>

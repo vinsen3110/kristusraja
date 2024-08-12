@@ -93,7 +93,7 @@
                         <a href="{{ route('homepage')}}" class="nav-item nav-link active">Home</a>
                         <a href="{{ route('about')}}" class="nav-item nav-link">Profile</a>
                         <a href="{{ route('pengumuman')}}" class="nav-item nav-link">Pengumuman</a>
-                        <a href="{{ route('berita')}}" class="nav-item nav-link">Berita</a>
+                        <a href="{{ route('berita1')}}" class="nav-item nav-link">Berita</a>
                         <div class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Komunitas</a>
                             <div class="dropdown-menu m-0">

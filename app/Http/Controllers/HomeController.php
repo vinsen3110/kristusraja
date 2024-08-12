@@ -14,7 +14,13 @@ class HomeController extends Controller
         $berita = Berita::all();
         return view('frontend.homepage', ['kepengurusan' => $kepengurusan, 'berita' => $berita]);
     }
-    
+    public function berita()
+{
+    $berita = Berita::all();
+    return view('frontend.berita1', [
+        'berita' => $berita
+    ]);
+}
     public function about(){
         return view('frontend.about');
     }
@@ -39,8 +45,8 @@ class HomeController extends Controller
     public function lingkungan(){
         return view('frontend.lingkungan');
     }
-    public function berita(){
-        return view('frontend.berita');
+    public function berita1(){
+        return view('frontend.berita1');
     }
     public function contact(){
         return view('frontend.contact');

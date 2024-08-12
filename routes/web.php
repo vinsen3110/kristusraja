@@ -11,7 +11,7 @@ Route::get('misdinar', [\App\Http\Controllers\HomeController::class, 'misdinar']
 Route::get('bir', [\App\Http\Controllers\HomeController::class, 'bir'])->name('bir');
 Route::get('bia', [\App\Http\Controllers\HomeController::class, 'bia'])->name('bia');
 Route::get('lingkungan', [\App\Http\Controllers\HomeController::class, 'lingkungan'])->name('lingkungan');
-Route::get('berita', [\App\Http\Controllers\HomeController::class, 'berita'])->name('berita');
+Route::get('berita1', [\App\Http\Controllers\HomeController::class, 'berita1'])->name('berita1');
 Route::get('contact', [\App\Http\Controllers\HomeController::class, 'contact'])->name('contact');
 Route::get('selengkapnya', [\App\Http\Controllers\HomeController::class, 'selengkapnya'])->name('selengkapnya');
 
