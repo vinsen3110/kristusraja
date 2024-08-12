@@ -2,14 +2,19 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Controllers\Admin\KepengurusanController;
+use App\Models\Kepengurusan;
+use App\Models\Berita;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
     public function index(){
-        return view('frontend.homepage');
+        $kepengurusan = Kepengurusan::all();
+        $berita = Berita::all();
+        return view('frontend.homepage', ['kepengurusan' => $kepengurusan, 'berita' => $berita]);
     }
-
+    
     public function about(){
         return view('frontend.about');
     }

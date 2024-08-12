@@ -96,18 +96,26 @@
                     <h1 class="mb-0">Berita Bulanan</h1>
                 </div>
                 <div class="packages-carousel owl-carousel">
+                    @foreach($berita as $item)
                     <div class="packages-item">
                         <div class="packages-img">
-                            <img src="{{ asset('frontend\frontend/img/4.jpg')}}" class="img-fluid w-100 rounded-top" alt="Image">
+                            @if ($item->foto_utama != '')
+                                                        <img src="{{ asset('storage/cover/' . $item->foto_utama) }}"
+                                                            alt="" class="img-fluid w-100 rounded-top">
+                                                    @else
+                                                        <img src="{{ asset('img/foto-not-font.jpeg') }}" alt=""
+                                                            class="img-fluid w-100 rounded-top">
+                                                    @endif
                             <div class="packages-info d-flex border border-start-0 border-end-0 position-absolute" style="width: 100%; bottom: 0; left: 0; z-index: 5;">
-                                <small class="flex-fill text-center border-end-0 py-2"><i class="fa fa-calendar-alt text-primary me-2"></i>12 Augst 2024</small>
+                                <small class="flex-fill text-center border-end-0 py-2"><i class="fa fa-calendar-alt text-primary me-2"></i>{{ $item ->tanggal}}</small>
                             </div>
                         </div>
                         <div class="packages-content bg-light" style="border-bottom-left-radius: 10px; border-bottom-right-radius: 10px;">
                             <div class="p-4 pb-0">
-                                <h5 class="mb-0">Judul berita</h5>
-                                <small class="text-uppercase">komsos pasir putih</small>
-                                <p class="mb-4">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt nemo quia quae illum aperiam fugiat voluptatem repellat</p>
+                                <h5 class="mb-0">{{ $item->judul}}</h5>
+                                <small class="text-uppercase">{{ $item->subjudul}}</small>
+                                <p class="mb-4">{{ \App\Helpers\TextHelper::limitWords($item->article, 20) }}</p>
+                            </div>
                             </div>
                             <div class="row bg-primary rounded-bottom mx-0">
                                 <div class="col-6 text-start px-0">
@@ -116,6 +124,7 @@
                             </div>
                         </div>
                     </div>
+                    @endforeach
                     <div class="packages-item">
                         <div class="packages-img">
                             <img src="{{ asset('frontend\frontend/img/5.jpg')}}" class="img-fluid w-100 rounded-top" alt="Image">
@@ -426,15 +435,12 @@
         <!-- Tour Booking End -->
 
         <!-- kepengurusan -->
-        <!-- kepengurusan -->
         <div class="container-fluid guide py-3">
             <div class="container py-3">
                 <div class="mx-auto text-center mb-5" style="max-width: 900px;">
                     <h5 class="section-title px-3">Dewan Pastoral Paroki</h5>
                     <h1 class="mb-0">Kepengurusan</h1>
-                </div>
-                
-                    
+                </div>            
                 
                 <div class="row g-4">
                     @foreach ($kepengurusan as $item)

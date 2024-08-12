@@ -29,13 +29,13 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="example-text-input" class="form-control-label">Judul</label>
-                                    <input class="form-control" type="text" name="judul" placeholder="Yanto Saputra">
+                                    <input class="form-control" type="text" name="judul" placeholder="masukkan judul">
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="example-text-input" class="form-control-label">Sub Judul</label>
-                                    <input class="form-control" type="text" name="subjudul" placeholder="Yanto Saputra">
+                                    <input class="form-control" type="text" name="subjudul" placeholder="masukkan subjudul">
                                 </div>
                             </div>
                             <div class="col-md-6">
@@ -47,7 +47,7 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="example-text-input" class="form-control-label">Tanggal</label>
-                                    <input class="form-control" type="date" name="tanggal" placeholder="CEO PT.Berkah">
+                                    <input class="form-control" type="date" name="tanggal" placeholder="masukkan tanggal">
                                 </div>
                             </div>
                             <div class="col-md-13">
