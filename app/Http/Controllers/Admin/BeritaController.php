@@ -64,7 +64,7 @@ class BeritaController extends Controller
             $extension = $request->file('image')->getClientOriginalExtension();
             $newName = $request->nama.'-'.now()->timestamp.'.'.$extension;
             $request->file('image')->storeAs('cover', $newName);
-            $request['cover'] = $newName;
+            $request['foto_utama'] = $newName;
         }
 
         $berita = Berita::where('slug', $slug)->firstOrFail();
