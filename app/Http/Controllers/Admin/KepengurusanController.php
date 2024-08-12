@@ -26,6 +26,7 @@ class KepengurusanController extends Controller
         $request->validate([
             'nama' => 'required|max:50',
             'jabatan' => 'required|max:100',
+            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);
 
         $newName = '';
@@ -52,6 +53,7 @@ class KepengurusanController extends Controller
         $request->validate([
             'nama' => 'required|max:50',
             'jabatan' => 'required|max:100',
+            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);
 
         if($request->file('image')) {

@@ -426,7 +426,51 @@
         <!-- Tour Booking End -->
 
         <!-- kepengurusan -->
+        <!-- kepengurusan -->
         <div class="container-fluid guide py-3">
+            <div class="container py-3">
+                <div class="mx-auto text-center mb-5" style="max-width: 900px;">
+                    <h5 class="section-title px-3">Dewan Pastoral Paroki</h5>
+                    <h1 class="mb-0">Kepengurusan</h1>
+                </div>
+                
+                    
+                
+                <div class="row g-4">
+                    @foreach ($kepengurusan as $item)
+                    <div class="col-md-6 col-lg-3">
+                        <div class="guide-item">
+                            <div class="guide-img">
+                                <div class="guide-img-efects">
+                                    @if ($item->cover != '')
+                                                        <img src="{{ asset('storage/cover/' . $item->cover) }}"
+                                                            alt="" class="img-fluid w-100 rounded-top">
+                                                    @else
+                                                        <img src="{{ asset('img/foto-not-font.jpeg') }}" alt=""
+                                                            class="img-fluid w-100 rounded-top">
+                                                    @endif
+                                </div>
+                                <div class="guide-icon rounded-pill p-2">
+                                    <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                                    <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i class="fab fa-twitter"></i></a>
+                                    <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i class="fab fa-instagram"></i></a>
+                                    <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i class="fab fa-linkedin-in"></i></a>
+                                </div>
+                            </div>
+                            <div class="guide-title text-center rounded-bottom p-4">
+                                <div class="guide-title-inner">
+                                    <h4 class="mt-3">{{ $item->nama}}</h4>
+                                    <p class="mb-0">{{ $item->jabatan }}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    @endforeach
+                </div>
+                
+            </div>
+        </div>
+        {{-- <div class="container-fluid guide py-3">
             <div class="container py-3">
                 <div class="mx-auto text-center mb-5" style="max-width: 900px;">
                     <h5 class="section-title px-3">Dewan Pastoral Paroki</h5>
@@ -519,7 +563,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> --}}
         <!-- Travel Guide End -->
 
         <!-- Blog Start -->
