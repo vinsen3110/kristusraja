@@ -115,15 +115,15 @@
   <div class="packages-carousel owl-carousel">
     <div class="packages-item">
         <div class="packages-img">
-            <img src="{{ asset('frontend\frontend/img/packages-4.jpg')}}" class="img-fluid w-100 rounded-top" alt="Image">
+            <img src="{{ asset('frontend\frontend/img/4.jpg')}}" class="img-fluid w-100 rounded-top" alt="Image">
             <div class="packages-info d-flex border border-start-0 border-end-0 position-absolute" style="width: 100%; bottom: 0; left: 0; z-index: 5;">
                 <small class="flex-fill text-center border-end-0 py-2"><i class="fa fa-calendar-alt text-primary me-2"></i>12 Augst 2024</small>
             </div>
         </div>
         <div class="packages-content bg-light" style="border-bottom-left-radius: 10px; border-bottom-right-radius: 10px;">
             <div class="p-4 pb-0">
-                <h5 class="mb-0">Venice - Italy</h5>
-                <small class="text-uppercase">Hotel Deals</small>
+                <h5 class="mb-0">Judul berita</h5>
+                <small class="text-uppercase">komsos pasir putih</small>
                 <p class="mb-4">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt nemo quia quae illum aperiam fugiat voluptatem repellat</p>
             </div>
             <div class="row bg-primary rounded-bottom mx-0">
@@ -135,15 +135,15 @@
     </div>
     <div class="packages-item">
         <div class="packages-img">
-            <img src="{{ asset('frontend\frontend/img/packages-3.jpg')}}" class="img-fluid w-100 rounded-top" alt="Image">
+            <img src="{{ asset('frontend\frontend/img/5.jpg')}}" class="img-fluid w-100 rounded-top" alt="Image">
             <div class="packages-info d-flex border border-start-0 border-end-0 position-absolute" style="width: 100%; bottom: 0; left: 0; z-index: 5;">
                 <small class="flex-fill text-center border-end-0 py-2"><i class="fa fa-calendar-alt text-primary me-2"></i>12 Augst 2024</small>
             </div>
         </div>
         <div class="packages-content bg-light" style="border-bottom-left-radius: 10px; border-bottom-right-radius: 10px;">
             <div class="p-4 pb-0">
-                <h5 class="mb-0">Venice - Italy</h5>
-                <small class="text-uppercase">Hotel Deals</small>
+                <h5 class="mb-0">Judul berita</h5>
+                <small class="text-uppercase">Komsos Pasir putih</small>
                 <p class="mb-4">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt nemo quia quae illum aperiam fugiat voluptatem repellat</p>
             </div>
             <div class="row bg-primary rounded-bottom mx-0">
@@ -155,15 +155,15 @@
     </div>
     <div class="packages-item">
         <div class="packages-img">
-            <img src="{{ asset('frontend\frontend/img/packages-2.jpg')}}" class="img-fluid w-100 rounded-top" alt="Image">
+            <img src="{{ asset('frontend\frontend/img/6.jpg')}}" class="img-fluid w-100 rounded-top" alt="Image">
             <div class="packages-info d-flex border border-start-0 border-end-0 position-absolute" style="width: 100%; bottom: 0; left: 0; z-index: 5;">
                 <small class="flex-fill text-center border-end-0 py-2"><i class="fa fa-calendar-alt text-primary me-2"></i>12 Augst 2024</small>
             </div>
         </div>
         <div class="packages-content bg-light" style="border-bottom-left-radius: 10px; border-bottom-right-radius: 10px;">
             <div class="p-4 pb-0">
-                <h5 class="mb-0">Venice - Italy</h5>
-                <small class="text-uppercase">Hotel Deals</small>
+                <h5 class="mb-0">Judul Berita</h5>
+                <small class="text-uppercase">Komsos Pasir Putih</small>
                 <p class="mb-4">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt nemo quia quae illum aperiam fugiat voluptatem repellat</p>
             </div>
             <div class="row bg-primary rounded-bottom mx-0">
@@ -175,15 +175,15 @@
     </div>
     <div class="packages-item">
         <div class="packages-img">
-            <img src="{{ asset('frontend\frontend/img/packages-1.jpg')}}" class="img-fluid w-100 rounded-top" alt="Image">
+            <img src="{{ asset('frontend\frontend/img/7.jpg')}}" class="img-fluid w-100 rounded-top" alt="Image">
             <div class="packages-info d-flex border border-start-0 border-end-0 position-absolute" style="width: 100%; bottom: 0; left: 0; z-index: 5;">
                 <small class="flex-fill text-center border-end-0 py-2"><i class="fa fa-calendar-alt text-primary me-2"></i>12 Augst 2024</small>
             </div>
         </div>
         <div class="packages-content bg-light" style="border-bottom-left-radius: 10px; border-bottom-right-radius: 10px;">
             <div class="p-4 pb-0">
-                <h5 class="mb-0">Venice - Italy</h5>
-                <small class="text-uppercase">Hotel Deals</small>
+                <h5 class="mb-0">Judul Berita</h5>
+                <small class="text-uppercase">Komsos Pasir Putih</small>
                 <p class="mb-4">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt nemo quia quae illum aperiam fugiat voluptatem repellat</p>
             </div>
             <div class="row bg-primary rounded-bottom mx-0">
