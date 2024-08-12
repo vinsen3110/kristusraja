@@ -311,7 +311,7 @@
                 <h1 class="mb-4">LOKASI GEREJA</h1>
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.705241980861!2d101.47731357415141!3d0.4313718995644013!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31d5a577e4bea3d7%3A0x18d411aa14339847!2sCatholic%20Church%20Of%20Christ%20King%20Of%20Universe!5e0!3m2!1sen!2sid!4v1721038434809!5m2!1sen!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
-            <div class="tab-class text-center">
+            {{-- <div class="tab-class text-center">
                 <ul class="nav nav-pills d-inline-flex justify-content-center mb-5">
                     <li class="nav-item">
                         <a class="d-flex mx-3 py-2 border border-primary bg-light rounded-pill active" data-bs-toggle="pill" href="#GalleryTab-1">
@@ -344,7 +344,7 @@
                         <div class="row g-2">
                 </div>
             </div>
-        </div>
+        </div> --}}
         <!-- Gallery End -->
 
         <!-- Tour Booking Start -->
