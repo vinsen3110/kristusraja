@@ -69,6 +69,12 @@
                                 <trix-editor input="article"></trix-editor>
                             </div>
                         </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="example-text-input" class="form-control-label">Type</label>
+                                <input class="form-control" type="text" name="type" placeholder="masukkan type">
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="card m-2">

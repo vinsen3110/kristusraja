@@ -112,7 +112,12 @@
                             <div class="p-4 pb-0">
                                 <h5 class="mb-0">{{ $item->judul }}</h5>
                                 <small class="text-uppercase">{{ $item->subjudul }}</small>
-                                <p class="mb-4">{{ Str::limit($item->article, 150) }}</p>
+                                {{-- <p class="mb-4">{{ Str::limit($item->article, 150) }}</p> --}}
+                               
+                                    <div class="text-truncate" style="max-width: 500px; max-height: 100px;">
+                                        <p class="mb-4">{!! Str::limit($item->article,55) !!}</p>
+                                    </div>
+                               
                             </div>
                             <div class="row bg-primary rounded-bottom mx-0">
                                 <div class="col-6 text-start px-0">

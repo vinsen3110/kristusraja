@@ -41,6 +41,9 @@
                                     <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
                                         article
                                     </th>
+                                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                                        type
+                                    </th>
                                     <th class="text-secondary opacity-7"></th>
                                 </tr>
                             </thead>
@@ -65,7 +68,11 @@
                                             </div>
                                         </td>
                                         <td>
-                                            {!! Str::limit($item->article, 40) !!}
+                                            {{-- {!! Str::limit($item->article) !!} --}}
+                                            {!! $item->article !!}
+                                        </td>
+                                        <td>
+                                            {{$item->type}}
                                         </td>
                                         <td class="align-middle ">
                                             <a href="beritaedit/{{ $item->slug }}"

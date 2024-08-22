@@ -29,6 +29,7 @@ class BeritaController extends Controller
             'judul' => 'required',
             'subjudul' => 'required|max:100',
             'article' => 'required',
+            'type' => 'required',
         ]);
         
         $newName = '';
@@ -58,6 +59,7 @@ class BeritaController extends Controller
             'judul' => 'required',
             'subjudul' => 'required|max:100',
             'article' => 'required',
+            'type'    => 'required',
         ]);
 
         if($request->file('image')) {

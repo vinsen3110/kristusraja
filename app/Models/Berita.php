@@ -20,6 +20,7 @@ class Berita extends Model
         'subjudul',
         'foto_utama',
         'article',
+        'type',
         'foto_1',
         'foto_2',
         'foto_3',

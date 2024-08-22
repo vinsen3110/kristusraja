@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('subjudul');
             $table->string('foto_utama', 255)->nullable();
             $table->text('article');
+            $table->string('type');
             $table->timestamps();
         });
     }
